@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog LPDP — Database Jurusan Tujuan</title>
+</head>
+
+<body>
+  <header>
+    <div class="eyebrow">Rumah Beasiswa Indonesia</div>
+    <h1>Katalog Kampus LPDP</h1>
+    <p class="sub">Database Magister &amp; Doktor lintas skema — STEM, SHARE, Pendukung, Kewirausahaan, Co-Funding,
+      Joint Degree, Unggulan, dan Dalam Negeri.</p>
+    <div class="stats">
+      <div class="stat"><span class="n" id="statTotal">0</span><span class="l">Total Entri</span></div>
+      <div class="stat"><span class="n" id="statShown">0</span><span class="l">Ditampilkan</span></div>
+      <div class="stat"><span class="n" id="statUni">0</span><span class="l">Perguruan Tinggi</span></div>
+      <div class="stat"><span class="n" id="statNegara">0</span><span class="l">Negara</span></div>
+    </div>
+  </header>
+
+  <div id="jadwalBanner"
+    style="display:none;background:#FFF7E8;border-bottom:1px solid var(--brass-soft);padding:12px 32px;font-size:13.3px;color:var(--ink);">
+    <strong id="jadwalNama"></strong>
+    <span id="jadwalStatus"
+      style="margin-left:8px;padding:2px 9px;border-radius:20px;font-size:11px;color:#fff;"></span>
+    <div id="jadwalPeriode" style="margin-top:3px;color:var(--ink-faint);"></div>
+    <a id="jadwalLink" href="#" target="_blank" style="font-size:12px;color:var(--navy);">Cek jadwal lengkap di website
+      resmi LPDP →</a>
+  </div>
+
+  <div class="toolbar">
+    <input id="search" type="text" placeholder="Cari perguruan tinggi, program studi, atau bidang industri">
+    <select id="fBidang">
+      <option value="">Semua Bidang</option>
+    </select>
+    <select id="fJenjang">
+      <option value="">Semua Jenjang</option>
+    </select>
+    <select id="fNegara">
+      <option value="">Semua Negara</option>
+    </select>
+    <select id="fIndustri">
+      <option value="">Semua Bidang Industri</option>
+    </select>
+    <button class="clear-btn" id="clearBtn">Reset filter</button>
+  </div>
+
+  <div id="loginModalOverlay"
+    style="display:none;position:fixed;inset:0;background:rgba(28,43,74,.55);z-index:60;align-items:center;justify-content:center;">
+    <div
+      style="background:var(--paper);max-width:340px;width:90%;border-radius:10px;border-top:4px solid var(--brass);padding:24px 26px;">
+      <h3 style="font-family:Georgia,serif;color:var(--navy);margin:0 0 14px;font-size:18px;">Login Admin</h3>
+      <input id="loginEmail" type="email" placeholder="Email"
+        style="width:100%;padding:9px 12px;border:1.5px solid var(--line);border-radius:6px;margin-bottom:8px;font-size:13.5px;">
+      <input id="loginPassword" type="password" placeholder="Password"
+        style="width:100%;padding:9px 12px;border:1.5px solid var(--line);border-radius:6px;margin-bottom:10px;font-size:13.5px;">
+      <div id="loginError" style="color:#B0402A;font-size:12.5px;margin-bottom:10px;display:none;"></div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;">
+        <button id="loginCancelBtn"
+          style="padding:8px 14px;border:1.5px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font-size:13px;">Batal</button>
+        <button id="loginSubmitBtn"
+          style="padding:8px 14px;border:none;border-radius:6px;background:var(--navy);color:#fff;cursor:pointer;font-size:13px;">Masuk</button>
+      </div>
+    </div>
+  </div>
+  <div style="padding:0 32px 15px;">
+    <select id="fCriteria"
+      style="padding:9px 10px;border:1.5px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font-size:13.5px;">
+      <option value="">Lihat Kriteria Jalur Seleksi</option>
+    </select>
+  </div>
+
+  <div id="criteriaModalOverlay"
+    style="display:none;position:fixed;inset:0;background:rgba(28,43,74,.55);z-index:50;align-items:center;justify-content:center;">
+    <div
+      style="background:var(--paper);max-width:640px;width:92%;max-height:82vh;overflow-y:auto;border-radius:10px;border-top:4px solid var(--brass);padding:26px 30px;">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:14px;">
+        <h2 id="criteriaTitle" style="font-family:Georgia,serif;color:var(--navy);margin:0;font-size:20px;"></h2>
+        <button id="criteriaCloseBtn"
+          style="border:none;background:none;font-size:20px;cursor:pointer;color:var(--ink-faint);">✕</button>
+      </div>
+      <div id="criteriaBody" style="font-size:13.8px;line-height:1.6;"></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="spine"></th>
+            <th style="width:56px">No</th>
+            <th>Jenjang</th>
+            <th>Bidang Industri Strategis</th>
+            <th>Perguruan Tinggi</th>
+            <th>Program Studi</th>
+            <th>Negara</th>
+            <th>Bidang</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="big">🔍</div>
+        Tidak ada entri yang cocok dengan pencarian/filter ini.
+      </div>
+    </div>
+    <div class="pagination">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <label for="pageSizeSelect" style="font-size:12.5px;color:var(--ink-faint);">Tampilkan</label>
+        <select id="pageSizeSelect"
+          style="padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font-size:13px;">
+          <option value="10" selected>10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+        </select>
+        <span style="font-size:12.5px;color:var(--ink-faint);">per halaman</span>
+      </div>
+      <button id="prevBtn">&larr; Sebelumnya</button>
+      <span class="page-info" id="pageInfo"></span>
+      <button id="nextBtn">Berikutnya &rarr;</button>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div style="padding:10px 32px;display:flex;align-items:center;gap:10px;">
+      <button id="loginBtn"
+        style="padding:7px 14px;border:1.5px solid var(--line);border-radius:6px;background:#fff;color:var(--navy);font-size:12.5px;cursor:pointer;">Login
+        Admin</button>
+      <span id="adminStatus" style="font-size:12.5px;color:var(--ink-faint);display:none;">Login sebagai admin — <button
+          id="logoutBtn"
+          style="border:none;background:none;color:var(--brass);cursor:pointer;text-decoration:underline;padding:0;">Logout</button></span>
+    </div>
+  </main>
+  <section style="background:var(--navy);color:var(--cream);padding:36px 32px;margin-top:10px;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div class="eyebrow" style="color:var(--brass-soft);">Selain LPDP</div>
+      <h2 style="font-family:Georgia,serif;font-size:22px;margin:6px 0 10px;">Cari beasiswa luar negeri lain?</h2>
+      <p style="color:#C7CEDD;font-size:13.5px;margin:0 0 18px;">Selain LPDP, ada beasiswa penuh dari pemerintah
+        negara lain seperti AAS, Fulbright, Chevening, GKS, MEXT, dan Erasmus Mundus. Lihat ringkasan syarat dan
+        tautan resmi masing-masing di halaman khusus.</p>
+      <a href="beasiswa-lain.html"
+        style="display:inline-block;background:var(--brass);color:var(--navy);font-weight:700;padding:11px 22px;border-radius:6px;text-decoration:none;font-size:13.5px;">Jelajahi
+        Beasiswa Lain &rarr;</a>
+    </div>
+  </section>
+
+  <footer>Data diambil otomatis dari dokumen resmi LPDP 2026·</footer>
+
+
+  <script src="criteria.js"></script>
+  <script src="jadwal.js"></script>
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
