@@ -40,7 +40,15 @@ const SCHOLARSHIP_REGISTRY = [
   { id: "daad", nama: "DAAD Scholarship (skema EPOS)", negara: "Jerman", tipe: "info", status: "aktif", warna: "#A9812D" },
   { id: "sisgp", nama: "Swedish Institute Scholarships for Global Professionals (SISGP)", negara: "Swedia", tipe: "info", status: "aktif", warna: "#C0562E" },
   { id: "stipendium-hungaricum", nama: "Stipendium Hungaricum", negara: "Hungaria", tipe: "info", status: "aktif", warna: "#6B4226" },
-
+  { id: "arryman", nama: "Arryman Scholarship", negara: "Amerika Serikat", tipe: "info", status: "aktif", warna: "#55707A" },
+  { id: "knight-hennessy", nama: "Knight-Hennessy Scholars", negara: "Amerika Serikat", tipe: "info", status: "aktif", warna: "#7A2E3B" },
+  { id: "rtp-australia", nama: "Research Training Program (RTP) Australia", negara: "Australia", tipe: "info", status: "aktif", warna: "#2F6B3A" },
+  { id: "mccall-macbain", nama: "McCall MacBain Scholarship", negara: "Kanada", tipe: "info", status: "aktif", warna: "#6B2737" },
+  { id: "jardine", nama: "Jardine Scholarship", negara: "Inggris", tipe: "info", status: "aktif", warna: "#1E3A5F" },
+  { id: "gates-cambridge", nama: "Gates Cambridge Scholarship", negara: "Inggris", tipe: "info", status: "aktif", warna: "#4B6E8C" },
+  { id: "mitsui-bussan", nama: "Mitsui-Bussan Scholarship Program for Indonesia", negara: "Jepang", tipe: "info", status: "aktif", warna: "#9C3B3B" },
+  { id: "turkiye-burslari", nama: "Turkiye Bursları (Turkiye Scholarships)", negara: "Turki", tipe: "info", status: "aktif", warna: "#B5482E" },
+  { id: "eiffel-excellence", nama: "Eiffel Excellence Scholarship", negara: "Prancis", tipe: "info", status: "aktif", warna: "#5A4A7A" },
   // Contoh slot untuk beasiswa berikutnya yang mau ditambah, hapus atau ganti kapan saja.
   // Selama statusnya "segera", kartu ini akan tampil sebagai placeholder tanpa perlu isi di scholarships-info.js.
   { id: "beasiswa-berikutnya", nama: "Beasiswa Berikutnya", negara: "Segera diumumkan", tipe: "info", status: "segera", warna: "#6B7482" }

@@ -176,5 +176,160 @@ const SCHOLARSHIPS_INFO = [
       "Untuk jenjang S3, sudah memiliki gelar S2 sebelum studi dimulai"
     ],
     link: "https://stipendiumhungaricum.hu/"
-  }
+  },
+
+  {
+    id: "arryman",
+    nama: "Arryman Scholarship",
+    singkatan: "Arryman",
+    negara: "Amerika Serikat (Northwestern University)",
+    jenjang: "S3",
+    warna: "#55707A",
+    deskripsi:
+      "Program dari Indonesian Scholarship and Research Support Foundation (ISRSF) yang bekerja sama dengan Northwestern University, ditujukan bagi warga negara Indonesia yang ingin menjadi akademisi di bidang ilmu sosial dan humaniora. Penerima lebih dulu menjalani satu tahun sebagai Arryman Fellow untuk persiapan pra-doktoral, sebelum lanjut sebagai Arryman Scholar menempuh S3 hingga 6 tahun.",
+    syarat: [
+      "Warga Negara Indonesia",
+      "Minimal lulusan S1 dengan rekam akademik yang kuat",
+      "Berkomitmen menjadi akademisi di bidang ilmu sosial seperti ilmu politik, sejarah, sosiologi, hukum, atau kajian pembangunan",
+      "Skor bahasa Inggris minimal setara TOEFL iBT 80 atau IELTS 6.5",
+      "Setelah lulus S3, wajib mengabdi sebagai staf akademik atau peneliti selama periode setara masa penerimaan beasiswa"
+    ],
+    link: "https://www.isrsf.org/"
+  },
+  {
+    id: "knight-hennessy",
+    nama: "Knight-Hennessy Scholars",
+    singkatan: "Knight-Hennessy",
+    negara: "Amerika Serikat (Stanford University)",
+    jenjang: "Jenjang pascasarjana(S2,S3, dan Profesi)",
+    warna: "#7A2E3B",
+    deskripsi:
+      "Program beasiswa penuh Stanford University yang didanai filantropi Phil Knight dan John Hennessy, terbuka untuk kandidat dari negara mana pun tanpa batasan bidang studi, ditujukan bagi calon pemimpin lintas disiplin. Pelamar harus mendaftar dan diterima secara terpisah di salah satu program pascasarjana penuh waktu Stanford.",
+    syarat: [
+      "Terbuka untuk warga negara dari negara mana pun",
+      "Wajib mendaftar dan diterima di program pascasarjana penuh waktu Stanford (S2, S3, MBA, JD, MD, dan sejenisnya)",
+      "Gelar S1 diperoleh dalam kurun waktu tertentu sebelum masuk, umumnya dalam 7 tahun terakhir, ada perpanjangan untuk yang pernah bertugas militer",
+      "Tidak ada kuota berdasarkan bidang studi atau wilayah asal"
+    ],
+    link: "https://knight-hennessy.stanford.edu/"
+  },
+  {
+    id: "rtp-australia",
+    nama: "Research Training Program (RTP) Australia",
+    singkatan: "RTP Australia",
+    negara: "Australia",
+    jenjang: "S2 (riset), S3",
+    warna: "#2F6B3A",
+    deskripsi:
+      "Skema pendanaan dari Pemerintah Australia yang disalurkan lewat masing-masing universitas untuk mahasiswa S2 riset dan S3 (Higher Degree by Research), terbuka untuk mahasiswa domestik maupun internasional. Berbeda dari beasiswa lain, RTP tidak punya pendaftaran terpusat, otomatis dipertimbangkan saat mendaftar admisi ke universitas Australia yang berpartisipasi.",
+    syarat: [
+      "Terbuka untuk mahasiswa dari negara mana pun, bukan hanya warga Australia",
+      "Terdaftar di program S2 riset atau S3 di universitas Australia yang berpartisipasi dalam RTP",
+      "Pendaftaran dilakukan lewat universitas tujuan, bukan lewat sistem terpusat pemerintah",
+      "Setiap universitas punya proses seleksi dan tenggat sendiri, umumnya berdasarkan prestasi akademik dan potensi riset"
+    ],
+    link: "https://www.education.gov.au/research-block-grants/research-training-program"
+  },
+  {
+    id: "mccall-macbain",
+    nama: "McCall MacBain Scholarship",
+    singkatan: "McCall MacBain",
+    negara: "Kanada (McGill University)",
+    jenjang: "S2 atau Profesional tertentu di McGill",
+    warna: "#6B2737",
+    deskripsi:
+      "Beasiswa penuh terbesar di McGill University, mencakup biaya kuliah, tunjangan bulanan, dan program pengembangan kepemimpinan, terbuka untuk pelamar dari seluruh dunia yang ingin menempuh S2 atau program profesional tertentu di McGill.",
+    syarat: [
+      "Sedang menempuh tahun terakhir S1, atau sudah lulus S1 (umumnya dalam 5 tahun terakhir, ada opsi untuk yang lebih senior dengan batas usia)",
+      "Berencana mendaftar program S2 atau program profesional penuh waktu tertentu di McGill (minimal 45 SKS)",
+      "Menunjukkan rekam jejak kepemimpinan dan keterlibatan komunitas",
+      "Mendaftar beasiswa dan program McGill secara terpisah, sesuai tenggat masing-masing"
+    ],
+    link: "https://mccallmacbainscholars.org/"
+  },
+  {
+    id: "jardine",
+    nama: "Jardine Scholarship",
+    singkatan: "Jardine",
+    negara: "Inggris (Oxford dan Cambridge)",
+    jenjang: "S1 (prioritas utama), S2 terbatas",
+    warna: "#1E3A5F",
+    deskripsi:
+      "Beasiswa penuh dari Jardine Foundation (Jardine Matheson Group) untuk studi di kolese mitra tertentu di Oxford dan Cambridge, terbuka untuk pelamar dari sejumlah negara Asia termasuk Indonesia, dengan penekanan pada potensi kepemimpinan.",
+    syarat: [
+      "Berasal dari negara atau wilayah dengan kehadiran bisnis signifikan Jardine Matheson, termasuk Indonesia",
+      "Sudah berdomisili di negara asal minimal 7 tahun sebelum pendaftaran",
+      "Diterima di salah satu kolese mitra tertentu di Oxford atau Cambridge, kuota kolese terbatas",
+      "Menunjukkan kualitas kepemimpinan, prestasi non akademik, dan komitmen terhadap kontribusi publik"
+    ],
+    link: "https://www.jardine-foundation.org/"
+  },
+  {
+    id: "gates-cambridge",
+    nama: "Gates Cambridge Scholarship",
+    singkatan: "Gates Cambridge",
+    negara: "Inggris (University of Cambridge)",
+    jenjang: "S2, S3",
+    warna: "#4B6E8C",
+    deskripsi:
+      "Beasiswa penuh dari Bill and Melinda Gates Foundation untuk studi pascasarjana di University of Cambridge, terbuka untuk pelamar dari negara mana pun di luar Inggris, dengan penekanan pada keunggulan akademik dan komitmen memberi manfaat bagi masyarakat luas.",
+    syarat: [
+      "Warga negara dari negara mana pun di luar Inggris",
+      "Mendaftar dan diterima di salah satu program S2 atau S3 penuh waktu di Cambridge, calon diperingkat oleh masing-masing departemen",
+      "Menunjukkan keunggulan akademik, kapasitas kepemimpinan, dan komitmen pada kebaikan bersama",
+      "Umumnya berusia di bawah 30 tahun, meski tidak mutlak"
+    ],
+    link: "https://www.gatescambridge.org/"
+  },
+  {
+    id: "mitsui-bussan",
+    nama: "Mitsui-Bussan Scholarship Program for Indonesia",
+    singkatan: "Mitsui-Bussan",
+    negara: "Jepang",
+    jenjang: "S1",
+    warna: "#9C3B3B",
+    deskripsi:
+      "Beasiswa penuh dari Mitsui & Co. khusus untuk lulusan SMA/MA di Indonesia jurusan IPA atau IPS, mencakup kursus bahasa Jepang intensif sekitar 1,5 tahun sebelum melanjutkan kuliah S1 di universitas Jepang.",
+    syarat: [
+      "Warga Negara Indonesia, lulusan SMA/MA kurikulum Indonesia jurusan IPA atau IPS, bukan SMK atau jurusan bahasa",
+      "Berusia di bawah 20 tahun per 1 April tahun pendaftaran dan belum menikah",
+      "Nilai akademik minimal 80 untuk mata pelajaran seperti Bahasa Inggris, Matematika, Fisika, Kimia, Ekonomi, atau Geografi sesuai jurusan",
+      "Melalui rangkaian seleksi meliputi ujian tertulis, tes bakat, pemeriksaan kesehatan, dan wawancara"
+    ],
+    link: "https://www.mbkscholarship-id.com/"
+  },
+  {
+    id: "turkiye-burslari",
+    nama: "Turkiye Bursları (Turkiye Scholarships)",
+    singkatan: "Turkiye Bursları",
+    negara: "Turki",
+    jenjang: "Diploma, S1, S2, S3, riset",
+    warna: "#B5482E",
+    deskripsi:
+      "Beasiswa penuh Pemerintah Turki yang dikelola YTB (Presidency for Turks Abroad and Related Communities), mencakup penempatan otomatis di universitas Turki, kursus bahasa Turki satu tahun, serta jenjang mulai dari diploma sampai S3 di berbagai bidang.",
+    syarat: [
+      "Bukan warga negara Turki",
+      "Batas usia bervariasi per jenjang, sekitar di bawah 21 tahun untuk S1, di bawah 30 tahun untuk S2, di bawah 35 tahun untuk S3",
+      "Nilai akademik minimal sekitar 70 persen untuk S1, lebih tinggi untuk jenjang pascasarjana",
+      "Mendaftar satu kali secara individu lewat portal resmi tanpa biaya pendaftaran, penempatan kampus dan jurusan diatur oleh sistem"
+    ],
+    link: "https://www.turkiyeburslari.gov.tr/"
+  },
+  {
+    id: "eiffel-excellence",
+    nama: "Eiffel Excellence Scholarship",
+    singkatan: "Eiffel Excellence",
+    negara: "Prancis",
+    jenjang: "S2, S3",
+    warna: "#5A4A7A",
+    deskripsi:
+      "Beasiswa dari Kementerian Eropa dan Luar Negeri Prancis untuk menarik mahasiswa asing unggulan ke program S2 dan S3 di institusi pendidikan tinggi Prancis, dengan fokus pada bidang prioritas seperti sains, teknik, hukum, ekonomi, dan ilmu sosial.",
+    syarat: [
+      "Bukan warga negara Prancis, termasuk dwikewarganegaraan dengan salah satunya Prancis",
+      "Untuk jenjang S2, umumnya berusia maksimal 29 tahun dan belum sedang berkuliah di Prancis",
+      "Untuk jenjang S3, umumnya berusia maksimal 35 tahun, dalam skema co-tutelle atau bimbingan bersama dengan institusi asal",
+      "Pendaftaran hanya bisa diajukan oleh institusi pendidikan tinggi Prancis yang dituju, bukan langsung oleh mahasiswa"
+    ],
+    link: "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program"
+  },
 ];

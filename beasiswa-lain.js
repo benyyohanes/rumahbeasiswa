@@ -26,11 +26,9 @@
     card.innerHTML = `
       <div class="bl-spine" style="background:${entry.warna || "#6B7482"}"></div>
       <div class="bl-card-body">
-        <div class="bl-card-top">
-          <div>
-            <p class="bl-card-nama">${escapeHtml(entry.nama)}</p>
-            <span class="bl-card-negara">${escapeHtml(entry.negara || "Segera diumumkan")}</span>
-          </div>
+        <div class="bl-card-header">
+          <p class="bl-card-nama">${escapeHtml(entry.nama)}</p>
+          <span class="bl-card-negara">${escapeHtml(entry.negara || "Segera diumumkan")}</span>
           <span class="bl-card-jenjang" style="background:${entry.warna || "#6B7482"}">Segera Hadir</span>
         </div>
         <p class="bl-card-deskripsi">Info untuk beasiswa ini belum ditambahkan. Cek kembali nanti.</p>
@@ -53,11 +51,9 @@
     card.innerHTML = `
       <div class="bl-spine" style="background:${warna}"></div>
       <div class="bl-card-body">
-        <div class="bl-card-top">
-          <div>
-            <p class="bl-card-nama">${escapeHtml(detail.nama || entry.nama)}</p>
-            <span class="bl-card-negara">${escapeHtml(detail.negara || entry.negara)}</span>
-          </div>
+        <div class="bl-card-header">
+          <p class="bl-card-nama">${escapeHtml(detail.nama || entry.nama)}</p>
+          <span class="bl-card-negara">${escapeHtml(detail.negara || entry.negara)}</span>
           <span class="bl-card-jenjang" style="background:${warna}">${escapeHtml(detail.jenjang || "")}</span>
         </div>
         <p class="bl-card-deskripsi">${escapeHtml(detail.deskripsi)}</p>

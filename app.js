@@ -25,7 +25,7 @@ function applyOverride(row) {
 
 async function loadDataFromFirestore() {
   const loadingMsg = document.getElementById('tbody');
-  if (loadingMsg) loadingMsg.innerHTML = '<tr><td colspan="8" style="padding:40px;text-align:center;color:var(--ink-faint);">Memuat data dari server...</td></tr>';
+  if (loadingMsg) loadingMsg.innerHTML = '<tr><td colspan="9" style="padding:40px;text-align:center;color:var(--ink-faint);">Memuat data dari server...</td></tr>';
 
   const [dataSnapshot, overrideSnapshot] = await Promise.all([
     getDocs(collection(db, "lpdp_data")),
@@ -255,6 +255,7 @@ function render() {
   pageRows.forEach(r => {
     const tr = document.createElement('tr');
     const color = BIDANG_COLORS[r.bidang] || '#999';
+    const badgeUnggulan = buatBadgeUniversitasUnggulan(r.pt, r.prodi, r.jenjang);
     tr.innerHTML = `
       <td class="spine" style="background:${color}"></td>
       <td class="num">${r.id}</td>
@@ -264,6 +265,7 @@ function render() {
       <td class="editable" data-field="prodi" data-id="${r.id}">${escapeHtml(r.prodi)}</td>
       <td>${escapeHtml(r.negara)}</td>
       <td><span class="bidang-tag" style="background:${color}">${escapeHtml(r.bidang)}</span></td>
+      <td class="unggulan-col">${badgeUnggulan}</td>
     `;
     frag.appendChild(tr);
   });

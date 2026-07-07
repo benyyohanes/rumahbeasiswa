@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katalog LPDP — Database Jurusan Tujuan</title>
@@ -100,6 +101,7 @@
             <th>Program Studi</th>
             <th>Negara</th>
             <th>Bidang</th>
+            <th>Unggulan</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -143,7 +145,7 @@
         negara lain seperti AAS, Fulbright, Chevening, GKS, MEXT, dan Erasmus Mundus. Lihat ringkasan syarat dan
         tautan resmi masing-masing di halaman khusus.</p>
       <a href="beasiswa-lain.html"
-        style="display:inline-block;background:var(--brass);color:var(--navy);font-weight:700;padding:11px 22px;border-radius:6px;text-decoration:none;font-size:13.5px;">Jelajahi
+        style="display:inline-block;background:#4ae727;color:#363030;font-weight:700;padding:11px 22px;border-radius:6px;text-decoration:none;font-size:13.5px;">Jelajahi
         Beasiswa Lain &rarr;</a>
     </div>
   </section>
@@ -151,10 +153,14 @@
   <footer>Data diambil otomatis dari dokumen resmi LPDP 2026·</footer>
 
 
+  <script src="data-universitas-unggulan.js"></script>
+  <script src="cek-universitas-unggulan.js"></script>
   <script src="criteria.js"></script>
   <script src="jadwal.js"></script>
+  <script src="app.js"></script> <!-- file render utama kamu -->
   <script type="module" src="firebase-init.js"></script>
   <script type="module" src="app.js"></script>
+  <script src="cloudinary-config.js"></script>
 </body>
 
 </html>
