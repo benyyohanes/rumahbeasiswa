@@ -134,8 +134,8 @@ function initUI() {
     document.getElementById('fIndustri').value = '';
     applyFilters();
   });
-  bindOnce('prevBtn', 'click', () => { currentPage--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-  bindOnce('nextBtn', 'click', () => { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  bindOnce('prevBtn', 'click', () => { currentPage--; render(); scrollToTableTop(); });
+  bindOnce('nextBtn', 'click', () => { currentPage++; render(); scrollToTableTop(); });
 
   const tbody = document.getElementById('tbody');
   if (!tbody.dataset.bound) {
@@ -229,6 +229,15 @@ function applyFilters() {
   });
   currentPage = 0;
   render();
+}
+
+function scrollToTableTop() {
+  const el = document.querySelector('.table-wrap');
+  if (!el) return;
+  const toolbar = document.querySelector('.toolbar');
+  const toolbarH = toolbar ? toolbar.offsetHeight : 0;
+  const y = el.getBoundingClientRect().top + window.scrollY - toolbarH - 10;
+  window.scrollTo({ top: y, behavior: 'smooth' });
 }
 
 function render() {
